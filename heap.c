@@ -47,6 +47,7 @@ void heap_push(Heap* pq, void* data, int priority){
    pq->heapArray[i].priority = priority;
 
    pq->size++;
+   printf("size: %d\n", pq->size);
 
    int posAct = i;
    heapElem aux;
