@@ -249,3 +249,17 @@ Wed, May 11, 2022  2:21:49 AM:
  tests:  7|0
    [ INFO ] Eliminando otro dato
 f85fd41
+Wed, May 11, 2022  2:22:56 AM: 
+ heap.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function 'heap_pop':
+heap.c:111:9: error: implicit declaration of function 'elif' [-Werror=implicit-function-declaration]
+       } elif (pq->heapArray[childAPos].priority < pq->heapArray[childBPos].priority) {
+         ^~~~
+heap.c:111:86: error: expected ';' before '{' token
+       } elif (pq->heapArray[childAPos].priority < pq->heapArray[childBPos].priority) {
+                                                                                      ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+6a48387
