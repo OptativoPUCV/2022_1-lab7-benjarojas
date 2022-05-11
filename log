@@ -108,3 +108,9 @@ heap.c:39:10: error: implicit declaration of function 'print' [-Werror=implicit-
 cc1.exe: all warnings being treated as errors
 Compilation failed
 c4a522b
+Wed, May 11, 2022  1:35:03 AM: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|2
+total_score: 20/70
+d4df10b
