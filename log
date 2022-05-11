@@ -191,3 +191,9 @@ Wed, May 11, 2022  1:55:11 AM:
  tests:  3|2
 total_score: 25/70
 e470c73
+Wed, May 11, 2022  1:55:20 AM: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  3|2
+total_score: 25/70
+9e29a4d
