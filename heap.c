@@ -58,7 +58,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
    pq->size++;
 
-   heapElem aux;
+   //heapElem aux;
    int posAct = i;
    int parent = 0;
 
