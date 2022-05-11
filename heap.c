@@ -80,7 +80,7 @@ void heap_pop(Heap* pq){
          break;
       }
    }
-   print("maxpos: %d\n", maxPos);
+   printf("maxpos: %d\n", maxPos);
    
 }
 
