@@ -44,21 +44,20 @@ void heap_push(Heap* pq, void* data, int priority){
       pq->capac = (pq->capac*2)+1;
    }
 
-
-   int i = 0;
+   /*int i = 0;
    while(i < pq->capac)
    {
       if(pq->heapArray[i].priority == 0)
          break;         
       i++;
-   }
+   }*/
 
-   pq->heapArray[i].data = data;
-   pq->heapArray[i].priority = priority;
+   pq->heapArray[pq->size].data = data;
+   pq->heapArray[pq->size].priority = priority;
 
    pq->size++;
 
-   int posAct = i;
+   int posAct = pq->size-1;
    int parent = 0;
 
    while(1)
@@ -75,58 +74,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
-/*
-   pq->heapArray[0].data = pq->heapArray[pq->size-1].data;
-   pq->heapArray[0].priority = pq->heapArray[pq->size-1].priority;
 
-   pq->heapArray[pq->size-1].priority = 0;
-   pq->size--;
-
-   int childAPos, childBPos, currentPos;
-
-   currentPos = 0;
-
-   heapElem aux;
-
-   while(1)
-   {
-      childAPos = (currentPos * 2) + 1;
-      childBPos = (currentPos * 2) + 2;
-
-      if(childAPos > pq->size || childBPos > pq->size)
-         break;
-
-      if(pq->heapArray[childAPos].priority > pq->heapArray[childBPos].priority)
-      {
-         if(pq->heapArray[currentPos].priority < pq->heapArray[childAPos].priority)
-         {
-            aux.data = pq->heapArray[childAPos].data;
-            aux.priority = pq->heapArray[childAPos].priority;
-
-            pq->heapArray[childAPos].data = pq->heapArray[currentPos].data;
-            pq->heapArray[childAPos].priority = pq->heapArray[currentPos].priority;
-
-            pq->heapArray[currentPos].data = aux.data;
-            pq->heapArray[currentPos].priority = aux.priority;
-
-            currentPos = childAPos;
-         }
-      } else if (pq->heapArray[childAPos].priority < pq->heapArray[childBPos].priority) {
-            aux.data = pq->heapArray[childBPos].data;
-            aux.priority = pq->heapArray[childBPos].priority;
-
-            pq->heapArray[childBPos].data = pq->heapArray[currentPos].data;
-            pq->heapArray[childBPos].priority = pq->heapArray[currentPos].priority;
-
-            pq->heapArray[currentPos].data = aux.data;
-            pq->heapArray[currentPos].priority = aux.priority;
-
-            currentPos = childBPos;
-      } else {
-         break;
-      }
-   }
-  */
 }
 
 Heap* createHeap(){
