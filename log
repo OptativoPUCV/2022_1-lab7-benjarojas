@@ -268,3 +268,14 @@ Wed, May 11, 2022  2:23:52 AM:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 48a16c8
+Wed, May 11, 2022  2:24:32 AM: 
+ heap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+ tests:  7|0
+afb51b1
+Wed, May 11, 2022  2:25:06 AM: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  7|1
+total_score: 45/70
+afb51b1
