@@ -42,7 +42,6 @@ void heap_push(Heap* pq, void* data, int priority){
       i++;
    }
    
-
    pq->heapArray[i].data = data;
    pq->heapArray[i].priority = priority;
 
@@ -54,10 +53,10 @@ void heap_push(Heap* pq, void* data, int priority){
 
    while(posAct > 0)
    {
-      if(pq->heapArray[posAct].priority > pq->heapArray[posAct-1].priority)
+      if(pq->heapArray[posAct].priority > pq->heapArray[posAct-2].priority)
       {
-         aux.data = pq->heapArray[posAct-1].data;
-         aux.priority = pq->heapArray[posAct-1].priority;
+         aux.data = pq->heapArray[posAct-2].data;
+         aux.priority = pq->heapArray[posAct-2].priority;
 
          pq->heapArray[posAct-1].data = pq->heapArray[posAct].data;
          pq->heapArray[posAct-1].priority = pq->heapArray[posAct].priority;
@@ -65,7 +64,7 @@ void heap_push(Heap* pq, void* data, int priority){
          pq->heapArray[posAct].priority = aux.priority;
          pq->heapArray[posAct].data = aux.data;
       }
-      posAct--;
+      posAct = posAct - 2;
    }
    
 }
