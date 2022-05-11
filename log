@@ -355,3 +355,23 @@ heap.c:67:39: error: assignment makes integer from pointer without a cast [-Werr
 cc1.exe: all warnings being treated as errors
 Compilation failed
 5428c7b
+Wed, May 11, 2022  5:25:33 PM: 
+ heap.c | 31 ++++++++++++++++++++++++++++++-
+ 1 file changed, 30 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function 'heap_pop':
+heap.c:92:16: error: passing argument 1 of '_swap' from incompatible pointer type [-Werror=incompatible-pointer-types]
+          _swap(&(pq->heapArray[rootPos].priority), &(pq->heapArray[child].priority));
+                ^
+heap.c:19:6: note: expected 'heapElem * {aka struct nodo *}' but argument is of type 'int *'
+ void _swap(heapElem* x, heapElem* y)
+      ^~~~~
+heap.c:92:52: error: passing argument 2 of '_swap' from incompatible pointer type [-Werror=incompatible-pointer-types]
+          _swap(&(pq->heapArray[rootPos].priority), &(pq->heapArray[child].priority));
+                                                    ^
+heap.c:19:6: note: expected 'heapElem * {aka struct nodo *}' but argument is of type 'int *'
+ void _swap(heapElem* x, heapElem* y)
+      ^~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+2ce8190
