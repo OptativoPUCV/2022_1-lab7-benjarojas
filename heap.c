@@ -71,20 +71,11 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
-   int maxPos;
-   for (int i = 0; i < pq->size-1; i++)
-   {
-      if(pq->heapArray[i+1].priority == 0)
-      {
-         maxPos = i;
-         break;
-      }
-   }
+ 
+   pq->heapArray[0].data = pq->heapArray[pq->size-1].data;
+   pq->heapArray[0].priority = pq->heapArray[pq->size-1].priority;
 
-   pq->heapArray[0].data = pq->heapArray[maxPos].data;
-   pq->heapArray[0].priority = pq->heapArray[maxPos].priority;
-
-   pq->heapArray[maxPos].priority = 0;
+   pq->heapArray[pq->size-1].priority = 0;
    pq->size--;
 
    int childAPos, childBPos, currentPos;
@@ -98,7 +89,7 @@ void heap_pop(Heap* pq){
    {
       childAPos = (currentPos * 2) + 1;
       childBPos = (currentPos * 2) + 2;
-      
+
       if(childAPos > pq->size || childBPos > pq->size)
          break;
 

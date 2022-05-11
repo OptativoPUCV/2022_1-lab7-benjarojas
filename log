@@ -243,3 +243,9 @@ Wed, May 11, 2022  2:20:32 AM:
  1 file changed, 52 insertions(+), 1 deletion(-)
  tests:  0|0
 b69e01f
+Wed, May 11, 2022  2:21:49 AM: 
+ heap.c | 15 +++------------
+ 1 file changed, 3 insertions(+), 12 deletions(-)
+ tests:  7|0
+   [ INFO ] Eliminando otro dato
+f85fd41
