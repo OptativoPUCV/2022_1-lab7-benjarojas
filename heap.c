@@ -63,12 +63,12 @@ void heap_push(Heap* pq, void* data, int priority){
 
          pq->heapArray[posAct].priority = aux.priority;
          pq->heapArray[posAct].data = aux.data;
-      }
-      if((posAct - 3) < 0)
+         if((posAct - 3) < 0)
       {
          posAct = posAct - 2;
       } else {
       posAct = posAct - 3;}
+      }
    }
    
 }
