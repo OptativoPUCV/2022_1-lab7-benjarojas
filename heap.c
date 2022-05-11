@@ -64,8 +64,8 @@ void heap_push(Heap* pq, void* data, int priority){
          pq->heapArray[parent].data = pq->heapArray[posAct].data;
          pq->heapArray[parent].priority = pq->heapArray[posAct].priority;
 
-         pq->heapArray[parent].priority = aux.priority;
-         pq->heapArray[parent].data = aux.data;
+         pq->heapArray[posAct].priority = aux.priority;
+         pq->heapArray[posAct].data = aux.data;
       } else {
          break;
       }
