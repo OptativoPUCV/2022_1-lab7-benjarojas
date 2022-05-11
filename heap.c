@@ -66,6 +66,7 @@ void heap_pop(Heap* pq){
    _swap(&(pq->heapArray[0]), &(pq->heapArray[pq->size-1]));
    pq->heapArray[pq->size-1].priority = 0;
    pq->heapArray[pq->size-1].data = NULL;
+   pq->size--;
 
    int rootPos = 0;
    int childA;
