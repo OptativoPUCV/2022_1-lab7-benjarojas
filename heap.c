@@ -55,6 +55,7 @@ void heap_push(Heap* pq, void* data, int priority){
    while(posAct > 0)
    {
       parent = (posAct-1)/2;
+      posAct = parent;
       if(pq->heapArray[posAct].priority > pq->heapArray[parent].priority)
       {
          aux.data = pq->heapArray[parent].data;
