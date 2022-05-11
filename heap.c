@@ -8,7 +8,7 @@
 typedef struct nodo{
    void* data;
    int priority;
-}heapElem;
+} heapElem;
 
 typedef struct Heap{
   heapElem* heapArray;
@@ -18,7 +18,6 @@ typedef struct Heap{
 
 void _swap(heapElem* x, heapElem* y)
 {
-
    heapElem aux;
 
    aux.data = x->data;
@@ -37,24 +36,14 @@ void* heap_top(Heap* pq){
 }
 
 void heap_push(Heap* pq, void* data, int priority){
-   
    if(pq->capac == pq->size)
    {
       pq->heapArray = (heapElem *) realloc(pq->heapArray, sizeof(heapElem)*((pq->capac*2)+1));
       pq->capac = (pq->capac*2)+1;
    }
 
-   /*int i = 0;
-   while(i < pq->capac)
-   {
-      if(pq->heapArray[i].priority == 0)
-         break;         
-      i++;
-   }*/
-
    pq->heapArray[pq->size].data = data;
    pq->heapArray[pq->size].priority = priority;
-
    pq->size++;
 
    int posAct = pq->size-1;
@@ -71,7 +60,6 @@ void heap_push(Heap* pq, void* data, int priority){
       posAct = parent;
    }
 }
-
 
 void heap_pop(Heap* pq){
 
