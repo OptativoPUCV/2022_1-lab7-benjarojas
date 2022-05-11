@@ -97,3 +97,14 @@ Wed, May 11, 2022  1:34:26 AM:
  tests:  2|2
 total_score: 20/70
 126aaf4
+Wed, May 11, 2022  1:34:57 AM: 
+ heap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:0:
+heap.c: In function 'heap_push':
+heap.c:39:10: error: implicit declaration of function 'print' [-Werror=implicit-function-declaration]
+          print("pos: %d\n", i);
+          ^~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+c4a522b
