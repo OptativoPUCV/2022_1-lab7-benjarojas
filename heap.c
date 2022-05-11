@@ -80,7 +80,58 @@ void heap_pop(Heap* pq){
          break;
       }
    }
-   printf("maxpos: %d\n", maxPos);
+
+   pq->heapArray[0].data = pq->heapArray[maxPos].data;
+   pq->heapArray[0].priority = pq->heapArray[maxPos].priority;
+
+   pq->heapArray[maxPos].priority = 0;
+   pq->size--;
+
+   int childAPos, childBPos, currentPos;
+   childAPos = 1;
+   childBPos = 2;
+   currentPos = 0;
+
+   heapElem aux;
+
+   while(1)
+   {
+      childAPos = (currentPos * 2) + 1;
+      childBPos = (currentPos * 2) + 2;
+      
+      if(childAPos > pq->size || childBPos > pq->size)
+         break;
+
+      if(pq->heapArray[childAPos].priority > pq->heapArray[childBPos].priority)
+      {
+         if(pq->heapArray[currentPos].priority < pq->heapArray[childAPos].priority)
+         {
+            aux.data = pq->heapArray[childAPos].data;
+            aux.priority = pq->heapArray[childAPos].priority;
+
+            pq->heapArray[childAPos].data = pq->heapArray[currentPos].data;
+            pq->heapArray[childAPos].priority = pq->heapArray[currentPos].priority;
+
+            pq->heapArray[currentPos].data = aux.data;
+            pq->heapArray[currentPos].priority = aux.priority;
+
+            currentPos = childAPos;
+         }
+      } else {
+            aux.data = pq->heapArray[childBPos].data;
+            aux.priority = pq->heapArray[childBPos].priority;
+
+            pq->heapArray[childBPos].data = pq->heapArray[currentPos].data;
+            pq->heapArray[childBPos].priority = pq->heapArray[currentPos].priority;
+
+            pq->heapArray[currentPos].data = aux.data;
+            pq->heapArray[currentPos].priority = aux.priority;
+
+            currentPos = childBPos;
+      }
+   }
+
+   
    
 }
 
