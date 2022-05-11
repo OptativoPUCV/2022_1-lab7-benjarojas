@@ -27,3 +27,22 @@ Wed, May 11, 2022  1:06:00 AM:
  tests:  2|2
 total_score: 20/70
 f361c37
+Wed, May 11, 2022  1:21:54 AM: 
+ heap.c | 26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+In file included from test.c:4:0:
+heap.c: In function 'heap_push':
+heap.c:28:44: error: passing argument 1 of 'realloc' makes pointer from integer without a cast [-Werror=int-conversion]
+       pq->heapArray = (heapElem *) realloc(pq->capac*2, sizeof(heapElem));
+                                            ^~
+In file included from test.c:2:0:
+c:\mingw\include\stdlib.h:486:40: note: expected 'void *' but argument is of type 'int'
+ _CRTIMP __cdecl __MINGW_NOTHROW  void *realloc (void *, size_t);
+                                        ^~~~~~~
+In file included from test.c:4:0:
+heap.c:33:8: error: unused variable 'k' [-Werror=unused-variable]
+    int k = pq->size;
+        ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+1debab0
