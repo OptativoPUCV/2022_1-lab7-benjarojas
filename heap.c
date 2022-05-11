@@ -108,7 +108,7 @@ void heap_pop(Heap* pq){
 
             currentPos = childAPos;
          }
-      } elif (pq->heapArray[childAPos].priority < pq->heapArray[childBPos].priority) {
+      } else if (pq->heapArray[childAPos].priority < pq->heapArray[childBPos].priority) {
             aux.data = pq->heapArray[childBPos].data;
             aux.priority = pq->heapArray[childBPos].priority;
 
@@ -123,9 +123,7 @@ void heap_pop(Heap* pq){
          break;
       }
    }
-
-   
-   
+  
 }
 
 Heap* createHeap(){
