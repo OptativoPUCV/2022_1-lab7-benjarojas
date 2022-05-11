@@ -46,7 +46,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
    heapElem aux;
    int posAct = i;
-   int parent;
+   int parent = 0;
 
    while(1)
    {
@@ -71,7 +71,17 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
-
+   int maxPos;
+   for (int i = 0; i < pq->size-1; i++)
+   {
+      if(pq->heapArray[i+1].priority == 0)
+      {
+         maxPos = i;
+         break;
+      }
+   }
+   print("maxpos: %d\n", maxPos);
+   
 }
 
 Heap* createHeap(){
