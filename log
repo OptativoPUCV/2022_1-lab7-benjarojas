@@ -61,3 +61,9 @@ c:\mingw\include\stdlib.h:486:40: note: expected 'void *' but argument is of typ
 cc1.exe: all warnings being treated as errors
 Compilation failed
 1c72b9a
+Wed, May 11, 2022  1:24:52 AM: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|2
+total_score: 20/70
+e5339d3
