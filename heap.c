@@ -34,7 +34,7 @@ void heap_push(Heap* pq, void* data, int priority){
    int i = 0;
    while(i < pq->capac)
    {
-      if(pq->heapArray[i].priority == NULL || pq->heapArray[i].priority == 0)
+      if(pq->heapArray[i].priority == 0)
       {
          printf("pos: %d\n", i);
          break;         
