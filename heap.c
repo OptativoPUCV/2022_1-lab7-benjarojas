@@ -32,7 +32,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
    pq->size++;
 
-   int posAct = pq->size;
+   int posAct = pq->size-1;
    heapElem aux;
    while(posAct > 0)
    {
