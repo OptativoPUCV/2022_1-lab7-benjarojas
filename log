@@ -344,3 +344,14 @@ Wed, May 11, 2022  5:15:29 PM:
  tests:  7|1
 total_score: 45/70
 258392b
+Wed, May 11, 2022  5:17:07 PM: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function 'heap_pop':
+heap.c:67:39: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+    pq->heapArray[pq->size-1].priority = NULL;
+                                       ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+5428c7b
