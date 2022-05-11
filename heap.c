@@ -35,10 +35,7 @@ void heap_push(Heap* pq, void* data, int priority){
    while(i < pq->capac)
    {
       if(pq->heapArray[i].priority == 0)
-      {
-         printf("pos: %d\n", i);
          break;         
-      }
       i++;
    }
 
@@ -46,7 +43,6 @@ void heap_push(Heap* pq, void* data, int priority){
    pq->heapArray[i].priority = priority;
 
    pq->size++;
-   printf("size: %d\n", pq->size);
 
    heapElem aux;
    int posAct = i;
@@ -55,7 +51,6 @@ void heap_push(Heap* pq, void* data, int priority){
    while(1)
    {
       parent = (posAct-1)/2;
-      printf("parent: %d\n", parent);
       if(pq->heapArray[posAct].priority > pq->heapArray[parent].priority)
       {
          aux.data = pq->heapArray[parent].data;
