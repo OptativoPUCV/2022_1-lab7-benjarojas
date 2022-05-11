@@ -36,6 +36,7 @@ void* heap_top(Heap* pq){
 }
 
 void heap_push(Heap* pq, void* data, int priority){
+
    if(pq->capac == pq->size)
    {
       pq->heapArray = (heapElem *) realloc(pq->heapArray, sizeof(heapElem)*((pq->capac*2)+1));
@@ -62,7 +63,7 @@ void heap_push(Heap* pq, void* data, int priority){
 }
 
 void heap_pop(Heap* pq){
-
+   //TODO
 }
 
 Heap* createHeap(){
