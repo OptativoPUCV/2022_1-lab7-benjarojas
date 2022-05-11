@@ -375,3 +375,9 @@ heap.c:19:6: note: expected 'heapElem * {aka struct nodo *}' but argument is of 
 cc1.exe: all warnings being treated as errors
 Compilation failed
 2ce8190
+Wed, May 11, 2022  5:26:02 PM: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  7|1
+total_score: 45/70
+0745331

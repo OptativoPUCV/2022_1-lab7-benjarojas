@@ -89,7 +89,7 @@ void heap_pop(Heap* pq){
 
       if(pq->heapArray[rootPos].priority < pq->heapArray[child].priority)
       {
-         _swap(&(pq->heapArray[rootPos].priority), &(pq->heapArray[child].priority));
+         _swap(&(pq->heapArray[rootPos]), &(pq->heapArray[child]));
          rootPos = child;
       } else {
          break;
