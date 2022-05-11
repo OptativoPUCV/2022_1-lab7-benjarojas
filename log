@@ -9,3 +9,9 @@ Wed, May 11, 2022  1:00:19 AM:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 4fbe37a
+Wed, May 11, 2022  1:03:46 AM: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|3
+total_score: 10/70
+da37944
